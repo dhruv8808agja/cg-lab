@@ -304,3 +304,27 @@ void main(int argc, char **argv) {
    glutKeyboardFunc(keyboard);
    glutMainLoop();
 }
+
+
+//modification
+void keyboard(unsigned char key, int x, int y)
+{
+	//-------- spin --------
+	if(key=='a')
+	{
+        //x translate
+		translate(100,0,0);
+		glutPostRedisplay();
+        draw(output);
+	}
+	else if(key=='2')
+	{
+		//setSpin(0.0,1.0,0.0);
+		glutPostRedisplay();
+	}
+	else if(key=='3')
+	{
+		//setSpin(0.0,0.0,1.0);
+		glutPostRedisplay();
+	}
+}
